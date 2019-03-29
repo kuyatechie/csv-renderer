@@ -120,3 +120,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 SECURE_SSL_REDIRECT = False
+
+#Login Redirect
+LOGIN_REDIRECT_URL = '/csv/list'
