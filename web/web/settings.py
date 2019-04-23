@@ -135,7 +135,6 @@ AUTH_LDAP_MIRROR_GROUPS = True
 #LDAPAuthenticationSettings
 import ldap
 AUTH_LDAP_SERVER_URI = "ldap://corpprodds201.prod1.benefitfocus.com:389"
-AUTH_LDAP_USER_DN_TEMPLATE = "uid=%(user)s,dc=example,dc=com"
 
 AUTH_LDAP_BIND_DN = "CN=LDAP Reader,OU=Service Accounts,DC=prod1,DC=benefitfocus,DC=com"
 AUTH_LDAP_BIND_PASSWORD = "1d@pr3@d3r"
