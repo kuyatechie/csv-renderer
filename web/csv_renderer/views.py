@@ -9,7 +9,6 @@ from web.settings import BASE_DIR
 
 TEMPLATE_DIRECTORY = "csv"
 
-@login_required
 def index(request, filename):
     html = create_html("{}/{}".format(TEMPLATE_DIRECTORY, filename))
     return HttpResponse(html, content_type="text/html")

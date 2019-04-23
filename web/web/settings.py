@@ -123,3 +123,28 @@ SECURE_SSL_REDIRECT = False
 
 #Login Redirect
 LOGIN_REDIRECT_URL = '/csv/list'
+
+#LDAPAuthenticationGlobalSettings
+# AUTHENTICATION_BACKENDS = [
+#     'django_auth_ldap.backend.LDAPBackend',
+#     'django.contrib.auth.backends.ModelBackend',
+# ]
+#
+# AUTH_LDAP_MIRROR_GROUPS = True
+
+#LDAPAuthenticationSettings
+# import ldap
+# AUTH_LDAP_SERVER_URI = "ldap://ldap.forumsys.com"
+# AUTH_LDAP_USER_DN_TEMPLATE = "uid=%(user)s,dc=example,dc=com"
+#
+# AUTH_LDAP_BIND_DN = "cn=read-only-admin,dc=example,dc=com"
+# AUTH_LDAP_BIND_PASSWORD = "password"
+#
+# AUTH_LDAP_REQUIRE_GROUP = "ou=scientists,dc=example,dc=com"
+# AUTH_LDAP_DENY_GROUP = "ou=chemists,dc=example,dc=com"
+#
+# AUTH_LDAP_USER_ATTR_MAP = {
+# "first_name": "cn",
+# "last_name": "sn",
+# "email": "mail"
+# }
