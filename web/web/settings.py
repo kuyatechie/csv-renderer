@@ -124,13 +124,19 @@ SECURE_SSL_REDIRECT = False
 #Login Redirect
 LOGIN_REDIRECT_URL = '/csv/list'
 
+#TestLogging
+import logging
+logger = logging.getLogger('django_auth_ldap')
+logger.addHandler(logging.StreamHandler())
+logger.setLevel(logging.DEBUG)
+
 #LDAPAuthenticationGlobalSettings
 AUTHENTICATION_BACKENDS = [
     'django_auth_ldap.backend.LDAPBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 #
-AUTH_LDAP_MIRROR_GROUPS = True
+# AUTH_LDAP_MIRROR_GROUPS = True
 
 #LDAPAuthenticationSettings
 import ldap
@@ -150,9 +156,3 @@ AUTH_LDAP_USER_ATTR_MAP = {
 "last_name": "Surname",
 "email": "UserPrincipalName"
 }
-
-#TestLogging
-import logging
-logger = logging.getLogger('django_auth_ldap')
-logger.addHandler(logging.StreamHandler())
-logger.setLevel(logging.DEBUG)
