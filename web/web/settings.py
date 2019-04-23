@@ -134,12 +134,15 @@ AUTH_LDAP_MIRROR_GROUPS = True
 
 #LDAPAuthenticationSettings
 import ldap
+from django_auth_ldap.config import LDAPSearch
 AUTH_LDAP_SERVER_URI = "ldap://corpprodds201.prod1.benefitfocus.com:389"
+AUTH_LDAP_USER_SEARCH = LDAPSearch("OU=Domain Users,DC=prod1,DC=benefitfocus,DC=com",
+                                   ldap.SCOPE_SUBTREE, "(sAMAccountName=%(user)s)")
 
 AUTH_LDAP_BIND_DN = "CN=LDAP Reader,OU=Service Accounts,DC=prod1,DC=benefitfocus,DC=com"
 AUTH_LDAP_BIND_PASSWORD = "1d@pr3@d3r"
 
-AUTH_LDAP_REQUIRE_GROUP = "CN=hdme,OU=Security Groups,DC=prod1,DC=benefitfocus,DC=com"
+# AUTH_LDAP_REQUIRE_GROUP = "CN=hdme,OU=Security Groups,DC=prod1,DC=benefitfocus,DC=com"
 # AUTH_LDAP_DENY_GROUP = "ou=chemists,dc=example,dc=com"
 
 AUTH_LDAP_USER_ATTR_MAP = {
