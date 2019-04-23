@@ -147,3 +147,9 @@ AUTH_LDAP_USER_ATTR_MAP = {
 "last_name": "Surname",
 "email": "UserPrincipalName"
 }
+
+#TestLogging
+import logging
+logger = logging.getLogger('django_auth_ldap')
+logger.addHandler(logging.FileHandler('/var/log/csv/web.log'))
+logger.setLevel(logging.DEBUG)
