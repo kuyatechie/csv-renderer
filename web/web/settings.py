@@ -151,5 +151,5 @@ AUTH_LDAP_USER_ATTR_MAP = {
 #TestLogging
 import logging
 logger = logging.getLogger('django_auth_ldap')
-logger.addHandler(logging.FileHandler('/var/log/csv/web.log'))
+logger.addHandler(logging.StreamHandler())
 logger.setLevel(logging.DEBUG)
