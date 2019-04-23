@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN apt-get update && \
     apt-get install gcc libsasl2-dev python-dev libldap2-dev libssl-dev -y && \
-    pip install --no-cache-dir --default-timeout 120 --trusted-host pypi.python.org -r requirements.txt
+    pip install --no-cache-dir --default-timeout 120 --trusted-host pypi.org -r requirements.txt
 
 COPY . .
 
